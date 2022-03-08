@@ -42,7 +42,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    Page<Student> findAllPageable(Pageable page) {
+    public Page<Student> findAllPageable(Pageable page) {
         return studentRepository.findAll(page);
     }
 
