@@ -125,7 +125,7 @@ class AppTest {
     @Test
     void paginationTest() {//OK pero con el repository no con el servicio
         Pageable page1 = PageRequest.of(0, 2);
-        Page<Student> studentpage1 = studentService.findAll(page1);//No funciona con el servicio
+        Page<Student> studentpage1 = studentService.findAllPageable(page1);//No funciona con el servicio
         List<Student> students = studentpage1.getContent();
         assertEquals(2, students.size());
         students.forEach(System.out::println);
